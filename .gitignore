@@ -1,5 +1,9 @@
+# --- Folders
 _site
-.sass-cache
 .jekyll-cache
+.idea
+
+# --- Files
+.sass-cache
 .jekyll-metadata
 vendor
