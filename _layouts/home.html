@@ -19,14 +19,16 @@ layout: default
       <a class="post-link" href="{{ post.url | relative_url }}">
         <li class="card">
           <img src="{{ post.image }}"/>
+          <h3>
+            {{ post.title | escape }}
+          </h3>
           <div>
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <h3>
-              {{ post.title | escape }}
-            </h3>
+            <p class="post-meta">{{ post.date | date: date_format }}</p>
             {%- if post.resume -%}
-              {{ post.resume }}
+              <p class="resume">
+                {{ post.resume }}
+              </p>
             {%- endif -%}
           </div>
         </li>
