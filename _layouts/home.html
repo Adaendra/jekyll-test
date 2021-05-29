@@ -10,23 +10,27 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
+    {%- for post in site.posts limit:1 -%}
+      {{post.title}}
+    {%- endfor -%}
+
     <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if post.resume -%}
-          {{ post.resume }}
-        {%- endif -%}
-        {%- if post.image -%}
-          {{ post.image }}
-        {%- endif -%}
-      </li>
+      {%- for post in site.posts offset:1 -%}
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        <li class="card">
+          <img src="{{ post.image }}"/>
+          <div>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+              {{ post.title | escape }}
+            </h3>
+            {%- if post.resume -%}
+              {{ post.resume }}
+            {%- endif -%}
+          </div>
+        </li>
+      </a>
       {%- endfor -%}
     </ul>
 
