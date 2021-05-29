@@ -10,7 +10,6 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
@@ -21,8 +20,11 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
+        {%- if post.resume -%}
+          {{ post.resume }}
+        {%- endif -%}
+        {%- if post.image -%}
+          {{ post.image }}
         {%- endif -%}
       </li>
       {%- endfor -%}
