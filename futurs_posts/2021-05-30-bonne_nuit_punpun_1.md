@@ -3,7 +3,7 @@ layout: post
 title:  "Avis - Bonne nuit Punpun #1"
 date:   2021-05-30 10:00:00 -0400
 categories: avis punpun
-resume: This is a resume test
+resume: On découvre la vie de Punpun, un jeune garçon amoureux de sa camarade de classe Aiko. Bien que sa famille soit bancale, Punpun et Aiko se sont avoués leurs sentiments respectifs et il essaie de s'accrocher à ses rêves  pour la rendre heureuse.
 image: 
 ---
 
