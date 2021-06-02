@@ -11,7 +11,17 @@ layout: default
 
   {%- if site.posts.size > 0 -%}
     {%- for post in site.posts limit:1 -%}
-      {{post.title}}
+    <div class="main_article">
+      <img src="{{ post.image }}"/>
+      <h1>
+        {{ post.title | escape }}
+      </h1>
+      {%- if post.resume -%}
+      <p class="resume">
+        {{ post.resume }}
+      </p>
+      {%- endif -%}
+    </div>
     {%- endfor -%}
 
     <ul class="post-list">
