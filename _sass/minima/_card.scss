@@ -60,16 +60,19 @@
   }
 }
 
-@include media-query($on-palm) {
+@include media-query($on-laptop) {
   .post-list {
     width: calc(100%);
     margin-left: 0px;
     margin-right: 0px;
 
-    .card {
-      width: 100%;
-      margin: 0px;
-      margin-top: 8px;
-    }
+
+  }
+}
+@include media-query($on-palm) {
+  .post-list {
+    width: calc(100%);
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }

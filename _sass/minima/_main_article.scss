@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: $text-color !important;
+}
+
 .main_article{
   width: 100%;
   height: 450px;
@@ -14,7 +19,7 @@
 
   h1 {
     position: absolute;
-    bottom: 60px;
+    bottom: 100px;
     left: 0px;
     background: linear-gradient(transparent, rgba($content-color, 0.8) 80%);
     width: 60%;
@@ -33,7 +38,7 @@
     left: 0px;
     background-color: rgba($content-color, 0.8);
     width: 60%;
-    height: 20px;
+    height: 60px;
     padding-left: 20%;
     padding-right: 20%;
     padding-bottom: 20px;
@@ -45,10 +50,37 @@
 }
 
 
+@include media-query($on-laptop) {
+  .main_article {
+    h1 {
+      width: 80%;
+      padding-left: 10%;
+      padding-right: 10%;
+      bottom: 120px;
+    }
+    p {
+      width: calc(100% - 40px);
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 80px;
+    }
+  }
+}
+
+
 @include media-query($on-palm) {
   .main_article {
+    h1 {
+      width: calc(100% - 40px);
+      padding-left: 20px;
+      padding-right: 20px;
+      bottom: 160px;
+    }
     p {
-
+      width: calc(100% - 40px);
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 120px;
     }
   }
 }

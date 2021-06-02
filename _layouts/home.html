@@ -11,17 +11,19 @@ layout: default
 
   {%- if site.posts.size > 0 -%}
     {%- for post in site.posts limit:1 -%}
-    <div class="main_article">
-      <img src="{{ post.image }}"/>
-      <h1>
-        {{ post.title | escape }}
-      </h1>
-      {%- if post.resume -%}
-      <p class="resume">
-        {{ post.resume }}
-      </p>
-      {%- endif -%}
-    </div>
+    <a href="{{ post.url | relative_url }}">
+      <div class="main_article">
+        <img src="{{ post.image }}"/>
+        <h1>
+          {{ post.title | escape }}
+        </h1>
+        {%- if post.resume -%}
+        <p class="resume">
+          {{ post.resume }}
+        </p>
+        {%- endif -%}
+      </div>
+    </a>
     {%- endfor -%}
 
     <ul class="post-list">
