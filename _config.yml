@@ -24,8 +24,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Redfire Desc.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: redfire
-github_username:  redfire
+#twitter_username: redfire
+#github_username:  redfire
 
 # Build settings
 theme: minima
