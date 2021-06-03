@@ -4,7 +4,7 @@ title:  "Avis - Bonne nuit Punpun #2"
 date:   2021-05-31 10:00:00 -0400
 categories: avis punpun
 resume: Punpun, Aiko et leurs amis sont arrivés à l’usine où est censé se trouver le trésor de la cassette, ainsi que les corps associés à ce trésor. Après de longues recherches, ils vont vivre quelques péripéties dans l’usine.
-image: 
+image: /assets/images/punpun2.jpg
 ---
 
 # Résumé
